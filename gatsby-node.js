@@ -6,6 +6,7 @@
 
 const path = require('path');
 const _ = require('lodash');
+const fs = require("fs")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
@@ -104,4 +105,11 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       },
     },
   });
+};
+
+exports.onPostBuild = function() {
+  fs.renameSync(path.join(__dirname, 'public'), path.join(__dirname, 'docs'));
+
+  fs.mkdirSync(path.join(__dirname, 'public'));
+
 };

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://jingyu-master.github.io/sitemap-index.xml
-Host: https://jingyu-master.github.io

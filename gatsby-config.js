@@ -18,32 +18,11 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     {
-      resolve: `gatsby-plugin-google-tagmanager`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        id: "G-CG4GC4NF46",
-
-        // Include GTM in development.
-        //
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
-  
-        // datalayer to be set before GTM is loaded
-        // should be an object or a function that is executed in the browser
-        //
-        // Defaults to null
-        defaultDataLayer: { platform: "gatsby" },
-  
-        // Name of the event that is triggered
-        // on every Gatsby route change.
-        //
-        // Defaults to gatsby-route-change
-        routeChangeEventName: "YOUR_ROUTE_CHANGE_EVENT_NAME",
-        // Defaults to false
-        enableWebVitalsTracking: true,
-        // Defaults to https://www.googletagmanager.com
-        selfHostedOrigin: "https://jingyu-master.github.io",
-        // Defaults to gtm.js
-        selfHostedPath: "YOUR_SELF_HOSTED_PATH",
+        trackingIds: [
+          "G-CG4GC4NF46", // Google Analytics / GA GA-TRACKING_ID
+        ],
       },
     },
     {
